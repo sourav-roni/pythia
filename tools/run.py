@@ -2,6 +2,7 @@
 import glob
 import importlib
 import os
+import sys
 
 from pythia.common.registry import registry
 from pythia.common.trainer import Trainer
@@ -13,7 +14,7 @@ def setup_imports():
     # Automatically load all of the modules, so that
     # they register with registry
     root_folder = registry.get("pythia_root", no_warning=True)
-
+	
     if root_folder is None:
         root_folder = os.path.dirname(os.path.abspath(__file__))
         root_folder = os.path.join(root_folder, "..")
@@ -84,4 +85,5 @@ def run():
 
 
 if __name__ == "__main__":
+    print("Hello")
     run()
