@@ -2,7 +2,6 @@
 import glob
 import importlib
 import os
-import sys
 
 from pythia.common.registry import registry
 from pythia.common.trainer import Trainer
